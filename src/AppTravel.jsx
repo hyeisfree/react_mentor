@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import "./App.css";
 
 export default function AppTravel() {
   const [selectedTravel, setSelectedTravel] = useState(null);
@@ -32,6 +33,15 @@ export default function AppTravel() {
       },
     ],
   });
+
+  useEffect(() => {
+    if (wishlist.nickname === "") {
+      const newNickname = prompt("이름을 입력 해주세요");
+      if (newNickname) {
+        setWishlist({ ...wishlist, nickname: newNickname });
+      }
+    }
+  }, [wishlist.nickname]);
 
   function travel__click(idx) {
     setSelectedTravel(idx);
@@ -91,27 +101,33 @@ export default function AppTravel() {
   }
 
   return (
-    <div>
-      <h1>Let's make Travel Wishlist</h1>
-      <p>{wishlist.nickname}님의 희망 여행지 리스트를 만들어봤어요!</p>
-      {wishlist.travels.map((travel, idx) => (
-        <ul
-          onClick={() => travel__click(idx)}
-          style={{
-            backgroundColor: selectedTravel === idx ? "lightblue" : "white",
-            cursor: "pointer",
-          }}
-        >
-          <li>{travel.city}</li>
-          <li>{travel.place}</li>
-          <li>{travel.season}</li>
-        </ul>
-      ))}
-      <button onClick={() => OnChange(selectedTravel)}>여행지 변경하기</button>
-      <button onClick={() => OnAdd()}>여행지 추가하기</button>
-      <button onClick={() => OnDelete(selectedTravel, wishlist)}>
-        여행지 삭제하기
-      </button>
+    <div className="travel">
+      <div className="travel__title">
+        <h1>Let's make Travel Wishlist</h1>
+      </div>
+      <main className="travel__main">
+        <p>{wishlist.nickname}님의 희망 여행지 리스트를 만들어봤어요</p>
+        {wishlist.travels.map((travel, idx) => (
+          <ul
+            onClick={() => travel__click(idx)}
+            style={{
+              backgroundColor: selectedTravel === idx ? "lightblue" : "white",
+              cursor: "pointer",
+            }}
+          >
+            <li>{travel.city}</li>
+            <li>{travel.place}</li>
+            <li>{travel.season}</li>
+          </ul>
+        ))}
+        <button onClick={() => OnChange(selectedTravel)}>
+          여행지 변경하기
+        </button>
+        <button onClick={() => OnAdd()}>여행지 추가하기</button>
+        <button onClick={() => OnDelete(selectedTravel, wishlist)}>
+          여행지 삭제하기
+        </button>
+      </main>
     </div>
   );
 }
