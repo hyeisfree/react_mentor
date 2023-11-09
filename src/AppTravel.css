@@ -1,18 +1,73 @@
 body {
   background-color: rgb(52, 58, 55);
-  margin-left: 430px;
-  margin-top: 100px;
+}
+
+#root {
+  width: 700px;
+  height: 700px;
+  margin-left: 380px;
+  margin-top: 50px;
 }
 
 div {
   background-color: rgb(239, 239, 239);
-  width: 620px;
-  height: 600px;
+  border-radius: 5%;
 }
 
-ul {
-  list-style-type: none;
+h1 {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.travel {
+  width: 700px;
+  height: 700px;
+}
+
+.travel__title {
+  padding-top: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin-left: 30px;
+  margin-bottom: 50px;
+}
+
+.buttons {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  border-color: rgb(52, 58, 55);
+  margin-top: 250px;
+}
+
+.change {
+  padding: 15px 30px;
+  border-radius: 15px;
+}
+
+.add {
+  padding: 15px 30px;
+  border-radius: 15px;
+}
+
+.delete {
+  padding: 15px 30px;
+  border-radius: 15px;
+}
+
+.travel__list {
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-left: 0px;
+  padding-right: 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.main__center {
+  text-align: center;
 }
