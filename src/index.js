@@ -4,10 +4,15 @@ import "./index.css";
 // import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 // import AppExercise from "./AppExercise";
-import AppTravel from "./AppTravel";
+// import AppTravel from "./AppTravel";
+import AppProfile from "./AppProfile";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppTravel />);
+root.render(
+  <React.StrictMode>
+    <AppProfile />
+  </React.StrictMode>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
