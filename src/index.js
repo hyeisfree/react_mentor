@@ -3,16 +3,16 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 // import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-//import AppProfile from "./AppProfile";
-// import AppTry from "./AppTry";
+import Counter from "./Components/Counter";
+// import AppProfile from "./AppProfile";
 // import AppExercise from "./AppExercise";
 // import AppTravel from "./AppTravel";
-import AppTry from "../src/App/AppTry";
+// import AppTry from "../src/App/AppTry";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppTry />
+    <Counter />
   </React.StrictMode>
 );
 
