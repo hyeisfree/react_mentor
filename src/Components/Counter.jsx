@@ -18,6 +18,10 @@ function countAdd() {
 <p>{add}</p> 에는 현재 상태의 값을 나타내주고,
 <button onClick={countAdd}>ADD Button</button> 버튼을 클릭할 때마다,
 countAdd 함수가 실행되어 <p>{add}</p> 리렌더링 되어 add 값이 1씩 증가하여 ui에 나타난다
+
+내 의문점
+Q. 하나의 useState 함수를 사용하여 여러 개의 상태 값을 관리할 수 있는 방법 없나? 3개의 값을 관리한다면, 3개의 함수를 만들면 되지 않을까?
+A. 불가함, 하나의 useState 함수는 하나의 상태 값만 관리할 수 있으므로 컴포넌트에서 관리해야 할 상태가 여러 개라면 useState를 여러 번 사용해야함
 */
 
 export default function Counter() {
