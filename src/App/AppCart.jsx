@@ -1,10 +1,10 @@
 import React from "react";
-import Count from "../Components/Count";
+import Cart from "../Components/Cart";
 
 export default function AppCount() {
   return (
     <div>
-      <Count />
+      <Cart />
     </div>
   );
 }
