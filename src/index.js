@@ -3,17 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 // import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-// import AppCounter from "./App/AppCounter";
-// import AppProfile from "./AppProfile";
-// import AppExercise from "./AppExercise";
-// import AppTravel from "./AppTravel";
-// import AppTry from "../src/App/AppTry";
-import AppCart from "../src/App/AppCart";
+import AppCount from "./App/AppCounter";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppCart />
+    <AppCount />
   </React.StrictMode>
 );
 
