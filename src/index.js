@@ -3,13 +3,15 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 // import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import AppExercise from "./Components/Exercise";
+// import AppExercise from "./Components/Exercise";
 // import AppCount from "./App/AppCounter";
+// import AppEx from "./App/AppEx";
+import AppRef from "./App/AppRef";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <AppExercise />
+    <AppRef />
   </React.StrictMode>
 );
 
