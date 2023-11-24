@@ -22,7 +22,7 @@ function Ref() {
   // 업데이트 함수 setCount(prev => prev + 1) 사용한 경우 prev는 항상 최신 상태 값을 가져오는 것을 보장할 수 있음.
   // setState(count + 1)을 사용할 경우 초기 count 값만을 가져오기 때문에 count가 1에서 멈춰버림.
   /* 문제점: 업데이트 함수인 setState를 사용해서 상태 변경에서는 count 업데이트를 할 수 있지만 props가 변경된 경우에는 타이머 함수가 실행되지 않음.
-  useEffect 두 번째 인자에 빈 배열을 넣어 timer 함수를 한 번만 세팅했기 때문입니다.
+  useEffect 두 번째 인자에 빈 배열을 넣어 timer 함수를 한 번만 세팅했기 때문.
   */
   return (
     <div className="App">
